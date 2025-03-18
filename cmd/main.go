@@ -33,6 +33,7 @@ func main() {
 	// inicializando a rota chamando controller
 	server.GET("/product", ProductController.GetProduct)
 	server.POST("/product", ProductController.CreateProduct)
+	server.GET("/product/:productId", ProductController.GetProductById)
 	// inicia servidor
 	server.Run(":8080")
 }
